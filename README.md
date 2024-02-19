@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Github](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-made-with-vue-and-scss--Hkpfs0aIZ)
+- Live Site URL: [Github](https://r3ygoski.github.io/base-apparel-coming-soon-vue/)
 
 ## My process
 
