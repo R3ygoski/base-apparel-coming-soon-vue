@@ -1,0 +1,194 @@
+$whiteGd: linear-gradient(135deg, #fff 0%,#fff5f5);
+$redGd: linear-gradient(135deg, #f8bfbf 0%,#ee8c8c);
+
+$desaturedRed: #ce9797;
+$softRed: #f96262;
+$darkGrayishRed: #413a3a;
+
+.main {
+    background: $whiteGd;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__header {
+        height: 84px;
+        display: flex;
+        align-items: center;
+        &-logo {
+            width: 110px;
+            margin-left: 1.9rem;
+        }
+    }
+    &__hero_banner {
+        background-image: url('../assets/images/hero-mobile.jpg');
+        width: 100%;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    &__notice {
+        text-align: center;
+        padding-top: 4.2rem;
+        height: 300px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        color: $desaturedRed;
+        &-title {
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 2.7rem;
+            letter-spacing: .7rem;
+            &-bold {
+                font-weight: 600;
+                letter-spacing: .6rem;
+                color: $darkGrayishRed;
+            }
+        }
+        &-desc {
+            font-weight: 400;
+            width: 90.5%;
+            margin-top: 1rem;
+        }
+    }
+    &__form {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        &-wrapper {
+            width: 82%;
+            height: 48px;
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        &-input {
+            border-radius: 2rem;
+            width: 98%;
+            border: none;
+            padding: 0 1.25rem;
+            border: 1px solid $darkGrayishRed;
+        }
+        &-btn {
+            position: absolute;
+            width: 60px;
+            height: 100%;
+            right: 0;
+            border-radius: 3rem;
+            border: none;
+            background: $redGd;
+            box-shadow: 0px 7px 15px rgba(0, 0, 0, .35);
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0px 7px 15px rgba(0, 0, 0, .45);
+                filter: grayscale(35%);
+            }
+        }
+        &-icon {
+            position: absolute;
+            right: 4.5rem;
+            top: 25%;
+        }
+        &-message {
+            position: absolute;
+            bottom: -50%;
+            left: 5%;
+            color: $softRed;
+        }
+        .main__form_input_error {
+            outline: 2px solid $softRed;
+            outline-offset: -1px;
+        }
+    }
+}
+
+.attribution { 
+    font-size: 12px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    a { 
+        font-size: 12px;
+        color: $darkGrayishRed; 
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 376px){
+    .main__hero_banner {
+      background-image: url('../assets/images/hero-mobile.jpg');
+      height: 280px;
+      background-size: cover;
+      background-position: top;
+    }  
+}
+
+@media (min-width: 1440px){
+    .main {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 10% auto 42.3%;
+        grid-template-rows: 25% 45% 30%;
+        &__hero_banner {
+            grid-area: 1/3/4/4;
+            background-image: url('../assets/images/hero-desktop.jpg');
+            height: 100%;
+        }
+        &__header {
+            grid-area: 1/2/2/3;
+            &-logo {
+                width: 160px;
+                margin-top: 5rem;
+                margin-left: 1.3rem;
+            }
+        }
+        &__notice {
+            text-align: left;
+            align-items: flex-start;
+            padding-top: 2rem;
+            padding-left: 1.2rem;
+            grid-area: 2/2/3/3;
+            &-title {
+                font-size: 4rem;
+                width: 30%;
+                line-height: 4.3rem;
+                letter-spacing: 1rem;
+                &-bold {
+                    letter-spacing: 1rem;
+                }
+            }
+            &-desc {
+                width: 65%;
+                line-height: 2rem;
+            }
+        }
+        &__form {
+            grid-area: 3/2/4/3;
+            justify-content: flex-start;
+            margin-left: 1rem;
+            &-wrapper {
+                height: 54px;
+                width: 67%;
+            }
+            &-btn {
+                width: 100px;
+            }
+            &-icon {
+                right: 7rem;
+            }
+        }
+    }
+    .attribution { 
+        bottom: 0;
+        left: -45%;
+    }
+}
